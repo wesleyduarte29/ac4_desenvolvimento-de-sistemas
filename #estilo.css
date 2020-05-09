@@ -1,0 +1,10 @@
+body{background-color:rgb(140, 209, 200);} 
+title{
+    color: blue;}
+  h1 {
+    color:rgba(0, 0, 255, 0.37);
+    font-family: verdana;
+    font-size: 250%
+    
+}
+br.center{text-align: center;}
