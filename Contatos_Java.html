@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+    <script>
+    function Valida() {
+        var VNome = document.getElementById("codnome").value;
+        var VEmail = document.getElementById("codemail").value;
+        var VMensagem = document.getElementById("codmsg").value;
+
+    if (VNome === ""||VEmail === ""||VMensagem === "") {
+        alert("Todos os campos devem ser preenchidos")
+    } else {
+        document.getElementById("codnome").value = "";
+        document.getElementById("codemail").value = "";
+        document.getElementById("codmsg").value = "";
+        alert("Mensagem enviada com sucesso !")
+    }
+         }
+    </script>
+
+        <meta charset="UTF-8"/>
+        
+        <title>
+        
+            Contatos
+
+        </title>
+
+    </head>
+
+    <body>
+        
+        <h1>
+            Fale Conosco
+        </h1><br><br>
+
+        Caso queria falar conosco, você pode ligar nos números abaixo ou nos enviar um formulário com a sua mensagem que<br>
+        responderemos por e-mail!<br><br>
+
+        Fique a vontade para mandar sugestões ou tirar dúvidas!<br><br>
+
+        <strong>Telefones:</strong><br>
+        (11)1234-5678<br>
+        (11)8765-4321<br><br>
+
+        <form method="POST"
+        name="formulario_contatos">
+
+            <label>
+
+                Nome:
+            
+            </label><br>
+
+            <input type="text" 
+            id = "codnome"
+            placeholder = "digite aqui"
+            maxlength="20"
+            size="50"
+            name="nome" 
+            ><br><br>
+
+            <label>
+
+                E-mail:
+            
+            </label><br>
+
+            <input type="text" 
+            id = "codemail"
+            placeholder = "digite aqui"
+            maxlength="20"
+            size="50"
+            name="email" 
+            ><br><br>
+
+            <label>
+                Assunto:
+            </label><br>
+
+            <select name="assunto">
+                <option value="atendimento">Atendimento</option>
+                <option value="secretaria">Secretária</option>
+                <option value="financeiro">Financeiro</option>
+                <option value="ouvidoria">Ouvidoria</option>
+            </select><br><br>
+
+            <label>
+
+                Mensagem:
+            
+            </label><br>
+
+            <input type="text" 
+            id = "codmsg"
+            placeholder = "digite aqui"
+            maxlength="20"
+            size="50"
+            name="mensagem" 
+            ><br><br>
+
+            <button type="button" onclick="Valida()">Enviar</button>
+
+            <input type="reset"
+            value="Limpar"/><br><br>
+
+            <a href="index.htm">Voltar</a>
+        </form>
+
+    </body>
+
+</html>
