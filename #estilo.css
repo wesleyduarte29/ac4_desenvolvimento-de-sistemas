@@ -1,10 +1,26 @@
-body{background-color:rgb(140, 209, 200);} 
+body{background-color:grey;} 
 title{
     color: blue;}
   h1 {
-    color:rgba(0, 0, 255, 0.37);
+    color:rgba(25, 0, 255, 0.979);
     font-family: verdana;
-    font-size: 250%
-    
+    font: size 250;
+ 
 }
+strong{color: whitesmoke;font-size: large;font-family: Verdana, Geneva, Tahoma, sans-serif;}
+input{color: whitesmoke;font-size: large;}
+label{color: whitesmoke;font-size: large;}
+
+
+ p {color: whitesmoke;
+    font-size: large;
+}
+
+
+h3 {color: blue;
+font-family: Verdana;
+font-size: large}
 br.center{text-align: center;}
+div { color:whitesmoke;}
+
+body{color: whitesmoke;font-size: large;font-family: Verdana, Geneva, Tahoma, sans-serif;}
