@@ -1,26 +1,26 @@
 
-body{background-color:grey;} 
-title{
-    color: blue;}
-  h1 {
-    color:rgba(25, 0, 255, 0.979);
-    font-family: verdana;
-    font: size 250;
+body{background-color:lightblue;}
+
+h1 {
+  color: black;
+  font-family: verdana;
+  font-size: 40;
 }
-strong{color: whitesmoke;font-size: large;font-family: Verdana, Geneva, Tahoma, sans-serif;}
-input{color: whitesmoke;font-size: large;}
-label{color: whitesmoke;font-size: large;}
 
-
- p {color: whitesmoke;
+ p {
     font-size: large;
 }
 
+a{
+  text-decoration: none;
+  color: blue;
+}
 
-h3 {color: blue;
+h3 {
 font-family: Verdana;
-font-size: large}
-br.center{text-align: center;}
+font-size: 40px;
+text-align: center;
+}
 
 
 div.nomeInst{
@@ -28,10 +28,12 @@ div.nomeInst{
   text-align: center;
   margin: 0 auto;
   width: 50%;
+  color: black;
 }
 
 div.menu{
-  margin-top: 5px;
+  margin: 30px auto 0 auto;
+  width: 70%;
 }
 
 div.voltarIni{
@@ -53,12 +55,11 @@ div.irCurs{
   text-align: center;
   width: 33%;
   display: inline-block;
-  margin-left: 7px;
 }
 
 div.cont{
   width: 70%;
-  text-align: center;
-  margin: 0 auto 0 auto;
+  text-align: justify;
+  margin: 50px auto 0 auto;
   font-family: Verdana, Tahoma, sans-serif;
 }
