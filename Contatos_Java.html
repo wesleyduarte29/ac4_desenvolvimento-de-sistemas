@@ -32,7 +32,9 @@
 
     <body>
         
-        <div class="nomeInst">ALL TEC CURSOS</div>
+        <div class="page-header">
+            <h1><a href="/">ALL TEC CURSOS</a></h1>
+        </div>
 
         <div class="menu">
             <div class="voltarIni"><a href="index.htm">Home</a></div>
@@ -42,14 +44,14 @@
 
         <div class="cont">
             
-        <h1>
+        <h3>
             Fale Conosco
-        </h1><br><br>
+        </h3><br><br>
 
-        Caso queria falar conosco, você pode ligar nos números abaixo ou nos enviar um formulário com a sua mensagem que<br>
-        responderemos por e-mail!<br><br>
+        Caso queria falar conosco, você pode ligar nos números abaixo ou nos enviar um formulário com a sua mensagem que responderemos por e-mail!<br><br>
 
         Fique a vontade para mandar sugestões ou tirar dúvidas!<br><br>
+
 
         <strong>Telefones:</strong><br>
         (11)1234-5678<br>
@@ -59,35 +61,7 @@
         name="formulario_contatos">
 
             <label>
-
-                Nome:
-            
-            </label><br>
-
-            <input type="text" 
-            id = "codnome"
-            placeholder = "digite aqui"
-            maxlength="20"
-            size="50"
-            name="nome" 
-            ><br><br>
-
-            <label>
-
-                E-mail:
-            
-            </label><br>
-
-            <input type="text" 
-            id = "codemail"
-            placeholder = "digite aqui"
-            maxlength="20"
-            size="50"
-            name="email" 
-            ><br><br>
-
-            <label>
-                Assunto:
+                <strong>Assunto:</strong>
             </label><br>
 
             <select name="assunto">
@@ -97,15 +71,25 @@
                 <option value="ouvidoria">Ouvidoria</option>
             </select><br><br>
 
-            <label>
+            <input type="text" 
+            id = "codnome"
+            placeholder = "NOME"
+            maxlength="20"
+            size="50"
+            name="nome" 
+            ><br><br>
 
-                Mensagem:
-            
-            </label><br>
+            <input type="text" 
+            id = "codemail"
+            placeholder = "E-MAIL"
+            maxlength="20"
+            size="50"
+            name="email" 
+            ><br><br>
 
             <input type="text" 
             id = "codmsg"
-            placeholder = "digite aqui"
+            placeholder = "MENSAGEM"
             maxlength="20"
             size="50"
             name="mensagem" 
@@ -116,7 +100,6 @@
             <input type="reset"
             value="Limpar"/><br><br>
 
-            <a href="index.htm">Voltar</a>
         </form>
     </div>
     </body>
