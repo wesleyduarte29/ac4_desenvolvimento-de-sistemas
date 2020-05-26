@@ -56,21 +56,28 @@ div.menu{
 div.voltarIni{
   font-size: 25px;
   text-align: center;
-  width: 33%;
+  width: 25%;
   float: left;
 }
 
 div.irCont{
   font-size: 25px;
   text-align: center;
-  width: 33%;
+  width: 25%;
+  float: right;
+}
+
+div.irAna{
+  font-size: 25px;
+  text-align: center;
+  width: 25%;
   float: right;
 }
 
 div.irCurs{
   font-size: 25px;
   text-align: center;
-  width: 33%;
+  width: 25%;
   display: inline-block;
 }
 
