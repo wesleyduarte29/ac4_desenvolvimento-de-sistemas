@@ -1,4 +1,6 @@
-body{background-color:lightblue;}
+body {
+  background-image: url("fundo2.png");
+}
 
 h1 {
   color: black;
@@ -23,7 +25,7 @@ ol {
 
 a{
   text-decoration: none;
-  color: blue;
+  color: black;
 }
 
 h3 {
@@ -33,13 +35,13 @@ text-align: center;
 }
 
 .page-header {
-  background-color: #0000CD;
+  background-image: url("fundo.png");
   margin-top: 0;
-  padding: 5px 5px 5px 10px;
+  padding: 10px 10px 10px 10px;
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
-  color: #ffffff;
+  color:black;
   font-size: 24pt;
   text-decoration: none;
   text-align: center;
@@ -87,12 +89,9 @@ div.irCurs{
 }
 
 div.cont{
-  width: 70%;
+  width: 90%;
   text-align: justify;
   margin: 50px auto 0 auto;
   font-family: Verdana, Tahoma, sans-serif;
-  border: solid rgba(13, 9, 53, 0.678) 1px;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box; 
-          box-sizing: border-box;
+
 }
