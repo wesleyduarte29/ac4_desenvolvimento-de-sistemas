@@ -1,4 +1,3 @@
-
 <html>
 
 <head>
@@ -104,26 +103,51 @@
 
     }
 
-    function drawAnnotations() {
+function drawAnnotations() {
 
       var data2 = new google.visualization.arrayToDataTable([
-        ['Jogador', 'Vitórias'],
-        ['Jefferson', 5],
-        ['Breno', 2],
-        ['Wesley', 1],
-        ['Guilherme', 1]
+        ['A','Aprendizado x Fluxo'],
+        ['Acre', 5.7],
+        ['Alagoas', 4.9],
+        ['Amapá', 4.4],
+        ['Amazonas', 5.3],
+        ['Bahia', 4.7],
+        ['Ceará', 6.1],
+        ['Brasília', 6.0],
+        ['E.Santo', 5.7],
+        ['Goiás', 5.9],
+        ['Maranhão', 4.5],
+        ['Mato Grosso', 5.7],
+        ['M. Grosso Sul', 5.5],
+        ['Minas Gerais', 6.3],
+        ['Pará', 4.5],
+        ['Paraíba', 4.7],
+        ['Paraná', 6.3],
+        ['Pernambuco', 4.8],
+        ['Piauí', 5.0],
+        ['Rio de Janeiro', 5.3],
+        ['Rio G. Norte', 4.5],
+        ['Rio G. Sul', 5.6],
+        ['Rondônia', 5.7],
+        ['Roraima', 5.4],
+        ['Santa Catarina', 6.3],
+        ['São Paulo', 6.5],
+        ['Sergipe', 4.3],
+        ['Tocantins', 5.4],
+            
       ]);
 
 
       var options2 = {
-        'title': 'Ranking de Vitórias',
-        'width': 400,
-        'height': 300,
+        'title': 'Ideb (Índice de Desenvolvimento da Educação Básica) por estado(2017)',
+        'width': 1300,
+        'height': 400,
         'backgroundColor': 'transparent'
       };
 
       var chart2 = new google.visualization.ColumnChart(document.getElementById('chart2_div'));
       chart2.draw(data2, options2);
+    
     }
 
     function drawChart() {
@@ -170,14 +194,15 @@
 
     <h3>A educação no Brasil e no mundo </h3>
 
-    <h1>%População com ensino superior completo (25 a 34 anos)</h1>
+    <h1>População com ensino superior completo (25 a 34 anos)</h1>
     <div id="chart4_div"></div>
     <div id="chart_div"></div>
     <div id="chart2_div"></div>
     <div id="chart3_div"></div>
-    <br><br><strong>Fonte: </strong><a
+    <br><br><strong>Fontes: </strong><a
       href="https://www.oecd.org/education/education-at-a-glance/educationataglance2019-dataandmethodology.htm">OECD</a>
       <br><a href="https://g1.globo.com/educacao/noticia/2019/06/19/mais-da-metade-dos-brasileiros-de-25-anos-ou-mais-ainda-nao-concluiu-a-educacao-basica-aponta-ibge.ghtml">G1</a>
+      <br><a href="https://www.qedu.org.br/brasil/ideb/ideb-por-estados">IDEB</a>
   </div>
 
 
