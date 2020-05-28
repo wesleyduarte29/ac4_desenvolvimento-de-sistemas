@@ -69,9 +69,7 @@
 
       var options4 = {
         colorAxis: { colors: ['#8A0808', 'red', 'white', '#58FA58' , '#0B6138'], minValue: 0, maxValue: 100 },
-        width: 900,
-        height: 500,
-        backgroundColor: 'blue',
+        backgroundColor: '#58ACFA',
         datalessRegionColor: 'gray'
       };
 
@@ -82,8 +80,8 @@
 
     function linha() {
       var data3 = new google.visualization.DataTable();
-        data3.addColumn('string','confira a cima os números que representam a trajetória brasileira');
-        data3.addColumn('number')
+        data3.addColumn('string','Confira a cima os números que representam a trajetória brasileira');
+        data3.addColumn('number', 'Brasileiros (em milhões)')
         data3.addRows([
           ['Crianças na escola ', 96.4],
           ['Fund. completo aos 16 anos',75.9],
@@ -91,15 +89,23 @@
          
         ]); 
 
-        var options3 = {
+        var options3 = {title: 'Crianças e adolescentes na escola',
                        'width':600,
                        'height': 300,
                        'backgroundColor': 'transparent',
-                        chartArea: {backgroundColor: 'transparent'}
+                        chartArea: {backgroundColor: 'transparent'},
+                        pointSize: 10,  
+                        legend: {position:'bottom'},
+                        series: {
+                          0: {color: 'black',
+                              visibleInLegend: true,
+                              pointShape: 'square',
+                          }
+                        }
                        };
 
-      var chart3 = new google.charts.Line(document.getElementById('chart3_div'));
-      chart3.draw(data3, google.charts.Line.convertOptions(options3));
+      var chart3 = new google.visualization.LineChart(document.getElementById('chart3_div'));
+      chart3.draw(data3, options3);
 
     }
 
@@ -116,10 +122,17 @@ function drawAnnotations() {
            
       ]);
 
-      var options2 = {
-        width: 900, 
-        height: 500,
-        backgroundColor: 'transparent'
+      var options2 = {title: 'IDEB por regiões do Brasil(2017)',
+        width: 600, 
+        height: 300,
+        backgroundColor: 'transparent',
+        legend: {position:'bottom'},
+        series: {
+                          0: {color: 'black',
+                              visibleInLegend: true,
+                              pointShape: 'square',
+                          }
+                        }
       };
 
       var chart2 = new google.visualization.ColumnChart(document.getElementById('chart2_div'));
@@ -140,9 +153,9 @@ function drawAnnotations() {
         ['Ensino básico completo', 47.4]
       ]);
 
-      var options = {
-        'width': 700,
-        'height': 350,
+      var options = {title: 'Porcentagem de conclusão do Ensino Básico (até o ensino médio)',
+        'width': 600,
+        'height': 300,
         'backgroundColor': 'transparent'
       };
 
@@ -168,30 +181,38 @@ function drawAnnotations() {
 
   <div class="cont">
 
-    <h3>A educação no Brasil e no mundo </h3>
-
-    <h1>População com ensino superior completo (25 a 34 anos)</h1>
+    <h3>A educação no Brasil - Panorama</h3>
+    <br>Apenas 21% dos jovens brasileiros, entre 25 e 34 anos, concluíram o Ensino Superior, segundo o levantamento 'Education at Glance', elaborado pela Organização de Cooperação e Desenvolvimento Econômico (OCDE).
+    O País apresentou melhora nos últimos anos, já que em 2008 o número de brasileiros nessa faixa etária com diploma de graduação era de 18%.
+    <br><br>Apesar disso, o estudo aponta que essa é a média mais baixa entre os países analisados na América Latina: Argentina (40%), Chile (34%), Colômbia (29%) e Costa Rica (28%). A média entre os países pertencentes à OCDE é de 44%.
+    <br><br>No mapa abaixo podemos verificar os dados de cada país pelo mundo:
+    <br><br>
+    <h1>%População com ensino superior completo (25 a 34 anos)</h1>
     <div id="chart4_div"></div>
 
-    <br><br>As informações divulgadas sobre o ensino básico no Brasil, apontam um enorme problema já que mais da metade da população acima 
-    <br>dos 25 anos sequer completou o ciclo básico de ensino, demostrando que estamos muito longe do ideal na educação.
+    <br><br>O problema da educação no Brasil começa ainda nas fases iniciais da trajetória escolar.
+    <br><br>As informações divulgadas sobre o ensino básico   também apontam um enorme problema já que mais da metade da população acima 
+    dos 25 anos sequer completou o ciclo básico de ensino, demostrando que estamos muito longe do ideal na educação.
     <br><br>
-    <br><h1>Porcentagem de conclusão do Ensino Básico (até o ensino médio)</h1>
     <h2><div id="chart_div"></div></h2>
 
-    <br><br>O IDEB é um indicador criado pelo governo federal para medir a qualidade do ensino nas escolas públicas.
-    <br>Em 2017 a nota do Brasil foi de 5,8 nos anos iniciais, 4,7 nos anos finais e 3,8 no Ensino Médio.
+    <br><br>O IDEB é um indicador criado pelo governo federal para medir a qualidade do ensino nas escolas públicas, que vai de 0 a 10.
+    Em 2017 a nota do Brasil foi:
+    <ul>
+      <li>5,8 nos anos iniciais do Ensino Fundamental</li>
+      <li>4,7 nos anos finais do Ensino Fundamental</li>
+      <li>3,8 no Ensino Médio</li>
+    </ul>
     <br>Ou seja, nos mostra que existe uma queda dos anos iniciais até a chegada do ensino médio e que mesmo nos anos iniciais, a nota não é satisfatória.
-    <br><br>
-    <br><h1>Ideb (Índice de Desenvolvimento da Educação Básica) por regiões do Brasil(2017)</h1>
-    <h2><div id="chart2_div"></div></h2>
-    <br><h1>Ranking de crianças e adolescentes na escola</h1>
-    <div id="chart3_div"></div>
-
-    <br><br>Mas ainda temos 1,5 milhão de brasileiros de 4 a 17 anos fora da escola.
-    <br>Ou seja, 1/4 dos nossos jovens com 16 anos não concluíram o Ensino Fundamental.
-    <br>A cada 100 jovens brasileiros de 19 anos, 41 não concluíram o Ensino Médio.
     <br>
+    <h2><div id="chart2_div"></div></h2>
+    <br><br>
+
+    <br><br>Ainda temos 1,5 milhão de brasileiros de 4 a 17 anos fora da escola.
+    <br><br>Ou seja, 1/4 dos nossos jovens com 16 anos não concluíram o Ensino Fundamental.
+    <br><br>A cada 100 jovens brasileiros de 19 anos, 41 não concluíram o Ensino Médio.
+    <br>
+    <div id="chart3_div"></div>
 
     <br><br><strong>Fontes: </strong>
     <br><a href="https://www.oecd.org/education/education-at-a-glance/educationataglance2019-dataandmethodology.htm">OECD</a>
