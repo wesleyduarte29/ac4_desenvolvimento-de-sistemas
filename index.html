@@ -1,0 +1,143 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+      google.charts.load('current', {'packages':['corechart','bar','line','geochart'],
+      'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'});
+      
+      google.charts.setOnLoadCallback(drawChart);
+      google.charts.setOnLoadCallback(drawAnnotations);
+      google.charts.setOnLoadCallback(linha);
+      google.charts.setOnLoadCallback(mapa);
+
+      function mapa(){
+        var data4 = google.visualization.arrayToDataTable([
+            ['Country', '%população com ensino médio completo (16 a 19 anos)'],
+            
+            ['Brazil',59],
+            
+        ]);
+
+        var options4 = {colorAxis: {colors: ['red','white','green'], minValue: 0, maxValue: 100},
+                       width: 900,
+                       height: 900,
+                       backgroundColor: 'transparent',
+                       datalessRegionColor: 'gray'
+                       };
+
+        var chart4 = new google.visualization.GeoChart(document.getElementById('chart4_div'));
+
+        chart4.draw(data4, options4);
+      }
+
+      function linha(){
+        var data3 = new google.visualization.DataTable();
+        data3.addColumn('string','confira a cima os números que representam a trajetória brasileira');
+        data3.addColumn('number','estudam');
+        data3.addRows([
+          ['crianças na escola ', 96.4],
+          
+          ['jovens que concluiram aos 16 o fundamental',75.9],
+          ['dos jovens com 19 que concluiram o ensino médio',59.2],
+         
+        ]);
+
+        var options3 = {chart:{title: 'Ranking de crianças e adolescentes na escola'
+                                },
+                       width:1000,
+                       height: 1000,
+                       backgroundColor: 'transparent'};
+
+        var chart3 = new google.charts.Line(document.getElementById('chart3_div'));
+        chart3.draw(data3, google.charts.Line.convertOptions(options3));
+
+      }
+
+      function drawAnnotations() {
+
+        var data2 = new google.visualization.arrayToDataTable([
+          ['crianças', 'na escola'],
+          ['estão na escola', 9],
+          ['fora da escola', 1],
+          ['jovens que concluram aos 16',5]
+
+          
+        ]);
+
+
+        var options2 = {'title':'Ranking de crianças na escola',
+                       'width':400,
+                       'height':300,    
+                       'backgroundColor': 'transparent'};
+        
+        var chart2 = new google.visualization.ColumnChart(document.getElementById('chart2_div'));
+        chart2.draw(data2, options2);
+      }  
+
+      function drawChart() {
+
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+          ['jovens que concluiram', 6.07],
+          ['não concluiram', 4.18],
+          ['Olives', 0],
+          ['Zucchini', 0],
+          ['Pepperoni', 0]
+        ]);
+
+        var options = {'title':'Jovens que Concluiram o Ensino Médio',
+                       'width':400,
+                       'height':300,
+                       'backgroundColor': 'transparent'};
+         
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      
+
+      }
+    </script>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+  </head>
+
+  <body>
+    <div class="page-header">
+        <h1><a href="/">ALL TEC CURSOS</a></h1>
+    </div>
+
+   <div class="menu">
+    <div class="voltarIni"><a href="index.htm">Home</a></div>
+    <div class="irCurs"><a href="cursos.html">Cursos</a></div>
+    <div class="irCont"><a href="Contatos_Java.html">Contato</a></div>
+   </div>
+
+    <div class="cont">
+     
+    <h3>A educação no Brasil </h3>
+        
+    <h1>%População brasileira com ensino médio concluído (16 a 19anos). </h1>
+    <div id="chart4_div"> </div>
+    
+    <div id="chart_div"> </div>
+    A cada 100 jovens brasileiros de 19 anos, 41 não concluíram o Ensino Médio.
+    <div id="chart2_div"> </div>
+
+    <div id="chart3_div"> </div>
+
+
+    <br><br>Mas ainda temos 1,5 milhão de brasileiros de 4 a 17 anos fora da escola.
+    <br><br>Ou seja, 1/4 dos nossos jovens com 16 anos não concluíram o Ensino Fundamental.
+    <br><br>A cada 100 jovens brasileiros de 19 anos, 41 não concluíram o Ensino Médio.
+    <br><br>
+    <br><br>
+
+    <br><br><strong>Fonte: </strong><a href="https://www.todospelaeducacao.org.br/pag/cenarios-da-educacao">todos pela educação</a>  
+    
+    </div>
+    
+
+  </body>
+</html>
+
