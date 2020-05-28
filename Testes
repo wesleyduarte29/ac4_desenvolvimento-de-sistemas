@@ -1,3 +1,4 @@
+
 <html>
 
 <head>
@@ -65,124 +66,121 @@
         ['South Africa', 6]
       ]);
 
-      var options4 = {colorAxis: {colors: ['red','white','green'], minValue: 0, maxValue: 100},
-                       width: 900,
-                       height: 900,
-                       backgroundColor: 'transparent',
-                       datalessRegionColor: 'gray'
-                       };
+      var options4 = {
+        colorAxis: { colors: ['red', 'white', 'green'], minValue: 0, maxValue: 100 },
+        width: 900,
+        height: 500,
+        backgroundColor: 'transparent',
+        datalessRegionColor: 'gray'
+      };
 
-        var chart4 = new google.visualization.GeoChart(document.getElementById('chart4_div'));
+      var chart4 = new google.visualization.GeoChart(document.getElementById('chart4_div'));
 
-        chart4.draw(data4, options4);
-      }
+      chart4.draw(data4, options4);
+    }
 
-      function linha(){
-        var data3 = new google.visualization.DataTable();
-        data3.addColumn('string','confira a cima os números que representam a trajetória brasileira');
-        data3.addColumn('number','estudam');
-        data3.addRows([
-          ['crianças na escola ', 96.4],
-          
-          ['jovens que concluiram aos 16 o fundamental',75.9],
-          ['dos jovens com 19 que concluiram o ensino médio',59.2],
-         
-        ]);
+    function linha() {
+      var data3 = new google.visualization.DataTable();
+      data3.addColumn('string', 'Jogador');
+      data3.addColumn('number', 'Vitórias');
+      data3.addRows([
+        ['Jefferson', 5],
+        ['Breno', 2],
+        ['Wesley', 1],
+        ['Guilherme', 1]
+      ]);
 
-        var options3 = {chart:{title: 'Ranking de crianças e adolescentes na escola'
-                                },
-                       width:1000,
-                       height: 1000,
-                       backgroundColor: 'transparent'};
+      var options3 = {
+        chart: {
+          title: 'Ranking de Vitórias'
+        },
+        width: 400,
+        height: 300,
+        backgroundColor: 'transparent'
+      };
 
-        var chart3 = new google.charts.Line(document.getElementById('chart3_div'));
-        chart3.draw(data3, google.charts.Line.convertOptions(options3));
+      var chart3 = new google.charts.Line(document.getElementById('chart3_div'));
+      chart3.draw(data3, google.charts.Line.convertOptions(options3));
 
-      }
+    }
 
-      function drawAnnotations() {
+    function drawAnnotations() {
 
-        var data2 = new google.visualization.arrayToDataTable([
-          ['crianças', 'na escola'],
-          ['estão na escola', 9],
-          ['fora da escola', 1],
-          ['jovens que concluram aos 16',5]
+      var data2 = new google.visualization.arrayToDataTable([
+        ['Jogador', 'Vitórias'],
+        ['Jefferson', 5],
+        ['Breno', 2],
+        ['Wesley', 1],
+        ['Guilherme', 1]
+      ]);
 
-          
-        ]);
 
+      var options2 = {
+        'title': 'Ranking de Vitórias',
+        'width': 400,
+        'height': 300,
+        'backgroundColor': 'transparent'
+      };
 
-        var options2 = {'title':'Ranking de crianças na escola',
-                       'width':400,
-                       'height':300,    
-                       'backgroundColor': 'transparent'};
-        
-        var chart2 = new google.visualization.ColumnChart(document.getElementById('chart2_div'));
-        chart2.draw(data2, options2);
-      }  
+      var chart2 = new google.visualization.ColumnChart(document.getElementById('chart2_div'));
+      chart2.draw(data2, options2);
+    }
 
-      function drawChart() {
+    function drawChart() {
 
-        var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Topping');
-        data.addColumn('number', 'Slices');
-        data.addRows([
-          ['jovens que concluiram', 6.07],
-          ['não concluiram', 4.18],
-          ['Olives', 0],
-          ['Zucchini', 0],
-          ['Pepperoni', 0]
-        ]);
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'Topping');
+      data.addColumn('number', 'Slices');
+      data.addRows([
+        ['Ensino fundamental incompleto', 33.1],
+        ['Nenhuma instrução formal', 6.9],
+        ['Esino fundamental incompleto', 8.1],
+        ['Ensino médio incompleto', 4.5],
+        ['Ensino básico completo', 47.4]
+      ]);
 
-        var options = {'title':'Jovens que Concluiram o Ensino Médio',
-                       'width':400,
-                       'height':300,
-                       'backgroundColor': 'transparent'};
-         
-        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-        chart.draw(data, options);
-      
+      var options = {
+        'title': 'Porcentagem de conclusão do Ensino Básico (até o ensino médio)',
+        'width': 550,
+        'height': 300,
+        'backgroundColor': 'transparent'
+      };
 
-      }
-    </script>
-    <link rel="stylesheet" type="text/css" href="estilo.css">
-  </head>
+      var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+      chart.draw(data, options);
 
-  <body>
-    <div class="page-header">
-        <h1><a href="/">ALL TEC CURSOS</a></h1>
-    </div>
+    }
+  </script>
+  <link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
 
-   <div class="menu">
+<body>
+  <div class="page-header">
+    <h1><a href="index.htm">ALL TEC CURSOS</a></h1>
+  </div>
+
+  <div class="menu">
     <div class="voltarIni"><a href="index.htm">Home</a></div>
     <div class="irCurs"><a href="cursos.html">Cursos</a></div>
     <div class="irCont"><a href="Contatos_Java.html">Contato</a></div>
-   </div>
+    <div class="irAna"><a href="analise.html">Análise</a></div>
+  </div>
 
-    <div class="cont">
-     
-    <h3>A educação no Brasil </h3>
-        
-    <h1>%População brasileira com ensino médio concluído (16 a 19anos). </h1>
-    <div id="chart4_div"> </div>
-    
-    <div id="chart_div"> </div>
-    A cada 100 jovens brasileiros de 19 anos, 41 não concluíram o Ensino Médio.
-    <div id="chart2_div"> </div>
+  <div class="cont">
 
-    <div id="chart3_div"> </div>
+    <h3>A educação no Brasil e no mundo </h3>
+
+    <h1>%População com ensino superior completo (25 a 34 anos)</h1>
+    <div id="chart4_div"></div>
+    <div id="chart_div"></div>
+    <div id="chart2_div"></div>
+    <div id="chart3_div"></div>
+    <br><br><strong>Fonte: </strong><a
+      href="https://www.oecd.org/education/education-at-a-glance/educationataglance2019-dataandmethodology.htm">OECD</a>
+      <br><a href="https://g1.globo.com/educacao/noticia/2019/06/19/mais-da-metade-dos-brasileiros-de-25-anos-ou-mais-ainda-nao-concluiu-a-educacao-basica-aponta-ibge.ghtml">G1</a>
+  </div>
 
 
-    <br><br>Mas ainda temos 1,5 milhão de brasileiros de 4 a 17 anos fora da escola.
-    <br><br>Ou seja, 1/4 dos nossos jovens com 16 anos não concluíram o Ensino Fundamental.
-    <br><br>A cada 100 jovens brasileiros de 19 anos, 41 não concluíram o Ensino Médio.
-    <br><br>
-    <br><br>
+</body>
 
-    <br><br><strong>Fonte: </strong><a href="https://www.todospelaeducacao.org.br/pag/cenarios-da-educacao">todos pela educação</a>  
-    
-    </div>
-    
-
-  </body>
 </html>
