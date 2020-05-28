@@ -1,4 +1,3 @@
-
 body{background-color:lightblue;}
 
 h1 {
@@ -6,6 +5,12 @@ h1 {
   font-family: verdana;
   font-size: 15;
   text-align: center;
+}
+
+h2 {
+  color: black;
+  font-family: verdana;
+  font-size: 8;
 }
 
  p {
